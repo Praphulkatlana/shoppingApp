@@ -9,7 +9,7 @@ import {
   type_submit,
   type_text,
 } from "../../Common/Text/Const";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import { indexTitle } from "../../Common/LongText";
 import { scrollToTop } from "../../Common/Components/CommonUtlis";
 import { isVaildString } from "./HomeUtlis";
@@ -71,11 +71,15 @@ useEffect(() => {
             ref={inputRef}
           />
           <button type={type_submit} className="btn c_p">
+
             <Lottie
-              options={indexGifOption}
-              height={indexGifSize}
-              width={indexGifSize}
+              animationData={indexGifOption}
+              style={{
+                width: indexGifSize,
+                height:indexGifSize,
+              }}
             />
+
           </button>
         </form>
       </div>

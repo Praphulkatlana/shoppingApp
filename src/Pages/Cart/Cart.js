@@ -1,13 +1,13 @@
 import React,{useState,useContext, useEffect} from 'react'
 import {useNavigate} from "react-router-dom"
 import "./Cart.scss"
-import Lottie from "react-lottie";
-import { all, emptyCartGifSize, emptyCartMessage, emptyCartOption, explore, YourBasketList } from '../../Common/Text/Const'
+import Lottie from "lottie-react";
+import { all, emptyCartGifSize, emptyCartMessage, emptyCartGif, explore, YourBasketList } from '../../Common/Text/Const'
 import CartList from './CartList/CartList.js'
 import Coupon from './Coupon'
 import Details from './Details'
 import BillSummary from './BillSummary'
-import { calculateDeliveryCharges, calculateSubTotal,getCartData, scrollToTop } from '../../Common/Components/CommonUtlis'
+import { calculateDeliveryCharges, calculateSubTotal, scrollToTop } from '../../Common/Components/CommonUtlis'
 import userContext from '../../State/UserContext';
 
 
@@ -49,10 +49,11 @@ useEffect(()=>{
 },[state.cartItem])
 
 
+
   return (
     <section className='cart_section'>
       <div className='wrapper d_f fd_c'>
-       {cartListData&&cartListData.length>0?
+       {cartListData&&cartListData?.length>0?
        <>
           <CartList title={YourBasketList} cartListData={cartListData}/>
           <div className='cart_container d_f fd_r jc_sb'>
@@ -80,11 +81,16 @@ useEffect(()=>{
        </>:
        <>
               <span className='emptyCartList d_f fd_c jc_c al_c'>
-        <Lottie
-              options={emptyCartOption}
-              height={emptyCartGifSize}
-              width={emptyCartGifSize}
-            />
+             <Lottie
+            animationData={emptyCartGif}
+            style={{
+              width: emptyCartGifSize,
+              height:emptyCartGifSize,
+            }}
+          />
+
+
+
             <p>{emptyCartMessage}</p>
             <div className='expolore_btn d_f jc_c'><button onClick={handleExploreClicked}>{explore}</button></div>
         </span>

@@ -1,8 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import {useNavigate} from "react-router-dom"
 import "./Checkout.scss"
-import Lottie from "react-lottie";
-import { card, cart, cashOnDelivery, continueShopping, orderConfrmGifSize, orderConfrmOption, orderSoonDelivered, pay, paymentDoneText, PaymentMode, PaymentModeType, thnxForPurchasing, type_radio, type_submit, UPI } from '../../Common/Text/Const'
+import Lottie from "lottie-react";
+import { card, cart, cashOnDelivery, continueShopping, orderConfrmGif, orderConfrmGifSize, orderSoonDelivered, pay, paymentDoneText, PaymentMode, PaymentModeType, thnxForPurchasing, type_radio, type_submit, UPI } from '../../Common/Text/Const'
 import { notify, scrollToTop } from '../../Common/Components/CommonUtlis';
 import { paymentDoneOrderPlaced } from '../../Common/LongText';
 
@@ -71,9 +71,11 @@ const handleContinueShoppingClicked=()=>{
           <div className="title d_f al_c">
             <h1>{paymentDoneText}</h1>
           <Lottie
-              options={orderConfrmOption}
-              height={orderConfrmGifSize}
-              width={orderConfrmGifSize}
+              animationData={orderConfrmGif}
+              style={{
+                width: orderConfrmGifSize,
+                height:orderConfrmGifSize,
+              }}
             />
           </div>
           <h4>{orderSoonDelivered}</h4>

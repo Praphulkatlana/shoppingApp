@@ -33,35 +33,38 @@ export const type_submit="submit"
 export const SearchItem="Search Item"
 
 
-export const indexGifSize=30;
-export const indexGifOption= {
-    loop: true,
-    autoplay: true, 
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
-  export const orderConfrmGifSize=120;
-export const orderConfrmOption= {
-    loop: true,
-    autoplay: true, 
-    animationData: orderConfrmAnimation,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
+export const indexGifSize="30px";
+export const indexGifOption= animationData;
+// export const indexGifOption= {
+//     loop: true,
+//     autoplay: true, 
+//     animationData: animationData,
+//     rendererSettings: {
+//       preserveAspectRatio: 'xMidYMid slice'
+//     }
+//   };
+export const orderConfrmGifSize=120;
+export const orderConfrmGif= orderConfrmAnimation
+// export const orderConfrmOption= {
+//     loop: true,
+//     autoplay: true, 
+//     animationData: orderConfrmAnimation,
+//     rendererSettings: {
+//       preserveAspectRatio: 'xMidYMid slice'
+//     }
+//   };
 
   export const emptyCartGifSize=250;
 
-  export const emptyCartOption= {
-    loop: true,
-    autoplay: true, 
-    animationData: emptyCartAnimation,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
+  export const emptyCartGif=emptyCartAnimation
+  // export const emptyCartOption= {
+  //   loop: true,
+  //   autoplay: true, 
+  //   animationData: emptyCartAnimation,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice'
+  //   }
+  // };
 
 
 export const images = [
