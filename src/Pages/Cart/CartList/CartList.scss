@@ -1,0 +1,114 @@
+@import "./../../../Common/Style//Color.scss";
+@import "./../../../Common/Style//Mixin.scss";
+
+
+.cartList_section{
+width: 100%;
+padding: 5rem 0;
+.wrapper{
+    width: 90%;
+    margin: auto;
+    @include mobile{
+        overflow-x: scroll;
+    }
+    svg{
+        background-color: transparent;
+    }
+    .title{
+        margin-left: 1.7rem;
+        font-size: 2rem;
+        padding: 1rem;
+        font-weight: 500;
+        &::first-letter{
+            font-size: 3rem;
+        }
+    }
+    .cartList_table{
+        border-spacing: 0px;
+        overflow-x: scroll;
+        max-width:100vw ;
+    }
+    .thread{
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+        .header_row{
+            background-color: $green1;
+            text-align: center;
+            .showmoreless{
+                background-color: transparent;
+                width: 5rem;
+                padding: 0;
+                font-weight: 100;
+                font-size: 0.8rem;
+                margin: auto;
+            }
+            th{
+                height: 3rem;
+                // width: 1rem;
+                padding: 20px 10px;
+                background-color: $green1;
+                padding: 1.25rem 0.8rem;
+                color: $white;
+                font-weight: 500;
+                border: 1px solid $black6;
+            }
+        }
+    }
+  tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    font-weight: 500;
+    .items_row{
+        text-align: center;
+        td, h3, p{
+            background-color: $white5;
+        }
+       
+        td{
+            padding: 2rem 1rem;
+            border-bottom: 0.2px solid $black6;
+            @include mobile{
+                padding: 1rem !important;
+            }
+        }
+        .item{
+            &-remove{
+                span{
+                    background-color: transparent;
+                }
+            }
+            &-img{
+                padding: 0;
+                img{
+                    object-fit: cover;
+                    border-radius: $borderRadius10;
+                    margin-left: 1rem;
+                    width: 150px;
+                    height: 100px;
+                @include mobile{
+                    width: 50px !important;
+                    height: 50px !important;
+                    margin: 0 !important;
+                    }
+                }
+                }
+            &-productName{
+                    width: 30%;
+                    h3{
+                        margin-bottom: 0.5rem;
+                    }
+                    p{
+                        font-weight: 300;
+                        color: $black5;
+                        font-size: 1rem;
+                    }
+                }
+        }
+        
+   
+    }
+  }
+}
+}

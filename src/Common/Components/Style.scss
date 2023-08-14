@@ -1,0 +1,245 @@
+@import "./../../Common//Style/Color.scss";
+@import "./../../Common//Style/Mixin.scss";
+//NavBar style
+.navbar_section{
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    background-color: transparent;
+    background-color: $black4;
+    border: none;
+    div,svg,img{
+        background-color: transparent;
+        }
+    .navbar_container{
+        transition: all 0.5s ease-in-out;
+        padding:1rem 4rem 0 3rem ;
+        height: 100%;
+        svg{
+            color: $green1;
+        }
+        img{
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+        }
+        .cart{
+            position: relative;
+            .numberOfItem{
+                color: $white;
+                position: absolute;
+                font-weight: 700;
+                top: 15%;
+                left: 40%;
+                background-color: transparent;
+            }
+        }
+    }
+    .isScrolled{
+        background-color: $black6;
+        position: sticky;
+        padding:0rem 1rem 0 1rem ;
+    }
+    .siteIssue{
+        background-color: transparent;
+        color: $white;
+    }
+}
+.HorizontalLine{
+    @include mobile{
+        display: block !important;
+    }
+    display: none;
+    margin: auto;
+    width: 90%;
+    height: 1px;
+    background-color: $grey5;
+}
+//Footer style
+.footer_section{
+    width: 100%;
+    background-color: $green2;
+    div, span, p{
+        background-color: $green2;
+    }
+    svg{
+        background-color: transparent;
+    }
+    .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 100%;
+        font-family: serif;
+        // background-color: cadetblue ;
+        @include mobile{
+            flex-direction: column !important;
+            text-align: center;
+        }
+       
+        &>div{
+            padding: 2rem 0 1rem 0;
+        }
+        .title{
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+            font-family: serif;
+        }
+        .about{
+           flex-basis: 25%;
+           height: 100%;
+           .description{
+            font-size: 1rem;
+            font-weight: 400;
+           }
+           .socialIcon{
+            padding-top: 1.8rem;
+            gap: 0.3rem;
+            a{
+                background-color: transparent;
+                color: $black;
+            }
+            svg{
+                margin-right: 1rem;
+            }
+           }
+        }
+        .deliveryTimings{
+            flex-basis: 25%;
+            height: 100%;
+            .content{
+                border-bottom: 1px solid $grey3;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                font-size: 1.1rem;
+                font-weight: 400;
+                white-space:nowrap;
+                .day{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+                span{
+                    display: inline-block;
+                }
+            }
+        }
+        .contactUs{
+            flex-basis: 25%;
+            height: 100%;
+            .content{
+                span{
+                   display: inline-block;
+                   margin-bottom: 1rem;
+                }
+                a{
+                    background-color: transparent;
+                    color: $black;
+                }
+                .logo{
+                    margin-right: 1.5rem;
+                    align-self: center;
+                }
+            }
+        }
+
+    }
+    .blackFooter{
+        background-color: $black2;
+        color: $white2;
+        height: 2rem;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0 0.2rem 0;
+        gap: 0.5rem;
+
+    @include mobile{ 
+        padding: 1rem 1rem;
+        box-sizing: border-box;
+        height: auto;
+        }
+        
+        svg{
+            color: $green1;
+            align-self: center;
+        }
+    }
+}
+
+//card Style
+.item_section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $white3;
+    transition: all 0.2s ease-in-out;
+   &:hover{
+    box-shadow: 0px 7px 15px -5px $black4;
+    .hoversection{
+        display: flex !important;
+    }
+   }
+    .tag{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $green1;
+        padding: 0.4rem;
+        border-bottom-right-radius: $borderRadius10;
+    }
+    .img_container{
+        flex: 1;
+        min-height: 15rem;
+        max-height: 15rem;
+        min-width: 100%;
+        max-width: 100%;
+        background-size: cover;
+        background-color: $black2;
+        color: $white;
+    }
+    .price_title_container{
+        padding-bottom: 1.5rem;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        color: $green1;
+        position: relative;
+
+        p{
+            color: $black2;
+            margin-bottom: 0.25rem;
+            font-weight: 400;
+        }
+        .price{
+            font-weight: 700;
+        }
+        .oldprice{
+            margin-right: 0.4rem;
+            text-decoration: line-through;
+            color: $grey3;
+        }
+        .hoversection{
+            position: absolute;
+            bottom: 2rem;
+            margin: auto;
+            bottom: 0;
+            right: 0;
+            padding: 0.5rem;
+            background-color: transparent;
+            display: none;
+            transition: display 2s ease-in-out;
+           div{
+            background-color: transparent;
+            padding: 0.5rem;
+            border-radius: 50%;
+           }
+            svg{
+                background-color: transparent;
+                color: $green1;
+            }
+        }
+    }
+
+    
+
+}

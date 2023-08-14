@@ -1,0 +1,141 @@
+@import "./../../Common//Style/Color.scss";
+@import "./../../Common//Style/Mixin.scss";
+.cart_section{
+    .wrapper{
+        .emptyCartList{
+            width: 100vw;
+            font-size: 2rem;
+            font-weight: 500;
+            gap: 2rem;
+            overflow: scroll;
+            padding: 2rem;
+            box-sizing: border-box;
+            padding-top: 5rem;
+            p,svg{
+                text-align: center;
+                background-color: transparent;
+            }
+            .expolore_btn{
+                button{
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                border-radius: $borderRadius30;
+                border: none;
+                margin: auto;
+                width: fit-content;
+                background-color: $green1;
+                color: $white;
+                cursor: pointer;
+                text-transform: capitalize;
+                }
+            }
+        }
+        .cart_container{
+            box-sizing: border-box;
+            padding: 2rem 3rem 5rem 3rem;
+            @include mobile{
+                flex-direction: column !important;
+                gap: 2rem;
+                &>div{
+                    width: unset !important;
+                }
+            }
+
+            &>div{
+                width: 30%;
+                height: fit-content;
+                border: 1px solid $black6;
+                border-radius: $borderRadius10;
+                padding: 1rem;
+                h2{
+                    margin-bottom: 2rem;
+                    font-size: 2rem;
+                }
+                button{
+                    padding: 1rem 1.5rem;
+                    border-radius: $borderRadius30;
+                    border: none;
+                    margin: auto;
+                    width: fit-content;
+                    background-color: $green1;
+                    color: $white;
+                    cursor: pointer;
+                    &:hover{
+                        outline: none;
+                    }
+                }
+            }
+            .hasErrorText{
+                color: $red;
+                font-size: 0.8rem;
+                font-weight: 400;
+                text-align: center;
+            }
+            .coupon{
+               
+                p{
+                    margin-bottom: 1rem;
+                }
+                form{
+                    label{
+                        font-weight: 500;
+                    }
+                    input{
+                        margin: 0.5rem 0 1rem 0;
+                        line-height: 1.5rem;
+                        padding: 0.5rem 0.74rem;
+                        border: 1px solid $grey3;
+                        border-radius: $borderRadius10;
+                        &:hover, &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            .details{
+                form{
+                    label{
+                        margin-bottom: 0.5rem;
+                    }
+                    input, textarea{
+                        margin-bottom: 1rem;
+                        // line-height: 2rem;
+                        border-radius: $borderRadius10;
+                        border: 1px solid $black6;
+                        padding: 0.7rem 0.75rem;
+                    }
+                    button{
+                        &:disabled{
+                            background-color: $black6
+                        }
+                    }
+                    .isError{
+                        border: 1px solid $red;
+                    }
+
+                }     
+
+            }
+            .bill{
+                .itemRow{
+                    color: $black4;
+                    padding: 0.5rem;
+                }
+                .total{
+                    color: $black;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding-top: 1rem;
+                    margin-top: 1rem;
+                    border-top: 1px solid $grey3;
+                }
+                .proceedBtn{
+                    margin-top: 0.5rem;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+       
+    }
+}

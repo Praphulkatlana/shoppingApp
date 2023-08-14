@@ -1,0 +1,140 @@
+@import "./../../Common//Style/Color.scss";
+@import "./../../Common//Style/Mixin.scss";
+
+.pdp_section{
+    width: 100%;
+    padding: 5rem 0;
+    .wrapper{
+       max-height: 100%;
+       gap: 3rem;
+       width: 90%;
+       margin: auto;
+       @include mobile{
+        flex-direction: column !important;
+        .leftpart,.rightpart{
+            width: unset !important;
+        }
+       }
+    .leftpart{
+        width: 60%;
+        img{
+            border-radius: $borderRadius30;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .rightpart{
+        width: 50%;
+        padding-top: 2rem;
+        font-weight: 400;
+        font-family: serif;
+        &>p, &>div{
+            margin-bottom: 1rem;
+           }
+        .title{
+            font-size: 5rem;
+            font-weight: 400;
+        }
+        .rating{
+            font-size: 1.7rem;
+            color: $green1;
+           svg{
+            fill: $green1;
+           }
+        }
+        .price{
+            font-size: 3rem;
+        }
+        .description{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $grey3;
+        }
+        .quantity{
+            gap: 1rem;
+            margin: 3rem 0 2rem 0;
+            div{
+                padding: 0.5rem;
+                border: 1px solid $grey3;
+                font-weight: 700;
+            }
+            .currentQuantity{
+                padding: 0 3rem;
+                font-weight: 600;
+            }
+            .disableAction{
+                  cursor: not-allowed;  
+                  color: $black6;
+            }
+        }
+        .button_section{
+            @include mobile{
+            flex-direction: column!important;
+            gap: 1rem;
+            .proceedToCart{
+                margin: 0 !important;
+            }
+            }
+        }
+
+        .addToCartButton,.proceedToCart{
+            padding: 1rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+            border: none;
+            border-radius: $borderRadius30;
+            transition: all 0.3s ease-in-out;
+            background-color: $black3;
+            color: $white;
+        }
+        .proceedToCart{
+            margin-left: 1.5rem;
+            background-color: $green1;
+            &:hover{
+                box-shadow:none;
+                transform: scale(1);
+            }
+        }
+    }
+}
+.realtedItem{
+    font-family: serif;
+    flex: 1;
+    padding-top: 5rem;
+    @include mobile{
+        padding-top: 0 !important;
+    }
+    &-title{
+        text-align: center;
+        color: $black;
+        font-size: 3rem;
+        font-weight: 600;
+        padding-top: 4rem;
+        margin-bottom: 1rem;
+        @include mobile{
+            padding-top: 3rem;
+        }
+    }
+    &-subtitle{
+        text-align: center;
+        color: $green1;
+        font-size: 1.2rem;
+        font-weight: 400;
+        padding-bottom: 4rem;
+    }
+    .realtedItem_section{
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        row-gap: 2rem;
+       @include mobile{
+        justify-content: center !important;
+       }
+ 
+        .item_section{
+            flex-basis: 15rem;
+        }
+
+    }
+}
+}

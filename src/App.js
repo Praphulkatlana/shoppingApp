@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import react,{useReducer} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import "./Common/Style/Mixin.scss"
 import './App.css';
+import Main from './Main';
+import {BrowserRouter} from "react-router-dom"
+import UserProvide from './State/UserProvide';
 
-function App() {
+AOS.init({
+  once: false,
+});
+
+
+const App=()=> {
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserProvide>
+       <BrowserRouter>
+         <Main/>
+       </BrowserRouter>
+      </UserProvide>
     </div>
   );
 }
