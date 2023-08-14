@@ -422,9 +422,11 @@ export const Subtotal="Subtotal";
 export const Delivery="Delivery";
 export const Discount="Discount";
 export const ProceedToCheckout="Proceed to Checkout";
-
+// eslint-disable-next-line no-useless-escape
 export const emailRegx=/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+// eslint-disable-next-line no-useless-escape
 export const mobileRegx=/^\d{10}$/
+// eslint-disable-next-line no-useless-escape
 export const onlySpecialCharsRegex = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+$/;
 
 export const dataErrorMessage="Please provide a valid input"

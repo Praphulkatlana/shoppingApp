@@ -20,7 +20,6 @@ const Listing = () => {
   const [itemsArray, setitemsArray] = useState([])
   const [dataToShow, setdataToShow] = useState([])
   const [mainData, setmainData] = useState([])
-  const paginationItems=[1,2,3,4]
  
   
   const checkCategory=()=>{
@@ -51,6 +50,7 @@ const Listing = () => {
   useEffect(()=>{
     checkCategory()
     // onPageIndexChange();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[paginationIndex])
 
   const handleNavIndexChange =(index) => {
@@ -63,6 +63,7 @@ const Listing = () => {
   }
   
 const filterDataByCategory=(data=itemsArray,category=categoryKeyWord)=>{
+  // eslint-disable-next-line eqeqeq
   if(category==all){
     setdataToShow([...data])
     setitemsArray([...data])
@@ -73,13 +74,14 @@ const filterDataByCategory=(data=itemsArray,category=categoryKeyWord)=>{
   setdataToShow([...filteredData])
   return filteredData
 }
-const handlePaginationIndexChange = (index) => {
-    setpaginationIndex(index)
-    scrollToTop()
-  }
+// const handlePaginationIndexChange = (index) => {
+//     setpaginationIndex(index)
+//     scrollToTop()
+//   }
 
   useEffect(()=>{
    getData()
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   useEffect(()=>{

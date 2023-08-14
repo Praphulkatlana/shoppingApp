@@ -56,12 +56,13 @@ const checkDataError=()=>{
   }
   }
   const checkUserDetails=()=>{
-    return Name||Mobile||Email||Address==""?false:true
+    return Name||Mobile||Email||Address===""?false:true
   }
   useEffect(()=>{
-    if(checkUserDetails){
+    if(checkUserDetails()){
       onGettingUserDetails()
     }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   return (

@@ -32,6 +32,7 @@ const PDP = () => {
       }
 
   const getDataById=()=>{
+     // eslint-disable-next-line eqeqeq
    let product= allProducts.filter(item=>item.id==productId)
    product=product[0]
     setproductDetails({...product})
@@ -51,10 +52,12 @@ const PDP = () => {
 
    useEffect(()=>{
     getDataById()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    },[allProducts])
  
    useEffect(()=>{
     filterRelatedProducts()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    },[productDetails])
  
 

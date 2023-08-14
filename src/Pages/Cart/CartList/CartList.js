@@ -53,6 +53,7 @@ useEffect(()=>{
 },[cartListData])
 useEffect(()=>{
  filterData()
+   // eslint-disable-next-line react-hooks/exhaustive-deps
 },[showMore,currentDataList])
 console.log("last",itemListToRender)
   return (

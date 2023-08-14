@@ -13,6 +13,7 @@ const Checkout = () => {
 
   useEffect(()=>{
     if(!isUserDetailsEntered)Navigation(`/${cart}`)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
 

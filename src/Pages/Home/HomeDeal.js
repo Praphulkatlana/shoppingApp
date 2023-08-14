@@ -40,6 +40,7 @@ useEffect(()=>{
     return(()=>{
     clearInterval(SecondsInterval)}
     )
+      // eslint-disable-next-line react-hooks/exhaustive-deps
 },[MiliSeconds])
 
   return (
