@@ -40,6 +40,7 @@ const PDP = () => {
 
   const filterRelatedProducts=()=>{
     let relatedProducts=allProducts.filter(item=>{
+      // eslint-disable-next-line eqeqeq
       return (item.category===productDetails.category&&item.id!=productId)
     })
     relatedProducts=relatedProducts.slice(0,4)

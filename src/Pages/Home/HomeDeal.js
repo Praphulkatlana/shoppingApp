@@ -8,7 +8,7 @@ import { convertRemainingTimeInMiliSeconds, formateDay, formateHours, formateMiu
 
 
 const HomeDeal = ({data}) => {
-   const {id,name,price,discountedPrice,img,endDealTime,perSybmol}=data;
+   const {name,price,discountedPrice,img,endDealTime,perSybmol}=data;
    const { state,dispatch } = useContext(userContext);
 
 const remainingTime=convertRemainingTimeInMiliSeconds(endDealTime);

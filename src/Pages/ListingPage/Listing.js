@@ -4,7 +4,6 @@ import Item from '../../Common/Components/Item';
 import {  catagoryId, id_text, Searchresultfor, explore, value_text, all } from '../../Common/Text/Const';
 import "./Listing.scss";
 // import {AiOutlineRight,AiOutlineLeft} from "react-icons/ai"
-import { scrollToTop } from '../../Common/Components/CommonUtlis';
 
 
 const Listing = () => {
@@ -14,7 +13,7 @@ const Listing = () => {
   const categoryKeyWord=queryParams.get("category");
   const pageIndex=queryParams.get("p")||1;
 
-  const [paginationIndex, setpaginationIndex] = useState(pageIndex)
+  const [paginationIndex] = useState(pageIndex)
   const [selectedNavIndex, setselectedNavIndex] = useState(0)
   const [isPreDefineCatagory, setisPreDefineCatagory] = useState(false)
   const [itemsArray, setitemsArray] = useState([])
@@ -33,12 +32,12 @@ const Listing = () => {
   })
   }
 
-  const onPageIndexChange=()=>{
-    // fetch("")
-    // .then(response=>response.json())
-    // .then(data=>setListData(data))
-    // .catch(err=>console.log(err))
-  }
+  // const onPageIndexChange=()=>{
+  //   // fetch("")
+  //   // .then(response=>response.json())
+  //   // .then(data=>setListData(data))
+  //   // .catch(err=>console.log(err))
+  // }
 
   const searchByText=(data)=>{
     const filterdata=data.filter(item=>{
