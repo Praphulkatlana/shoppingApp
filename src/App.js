@@ -1,4 +1,3 @@
-import react,{useReducer} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import "./Common/Style/Mixin.scss"

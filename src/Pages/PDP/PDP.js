@@ -2,7 +2,7 @@ import React,{useState,useEffect,useContext} from 'react'
 import {useNavigate,useLocation}from"react-router-dom"
 import "./PDP.scss";
 import cabbage from "./../../Common/Media/Image/cabbage.png";
-import { addSymbol, addtoCart, cart, currencySymbol, minusSymbol, ProceedToCart,perKG, cartNumber } from '../../Common/Text/Const';
+import { addSymbol, addtoCart, cart, currencySymbol, minusSymbol, ProceedToCart,perKG } from '../../Common/Text/Const';
 import { realtedItemSubTitle, realtedItemTitle } from '../../Common/LongText';
 import { convertRatingToStar } from '../Home/HomeUtlis';
 import Item from '../../Common/Components/Item';

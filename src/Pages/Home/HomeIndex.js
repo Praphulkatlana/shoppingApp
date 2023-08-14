@@ -4,7 +4,6 @@ import {
   images,
   indexGifOption,
   indexGifSize,
-  onlySpecialCharsRegex,
   SearchItem,
   type_submit,
   type_text,

@@ -1,9 +1,9 @@
 import React,{useEffect, useState} from 'react'
 import {useLocation} from "react-router-dom"
 import Item from '../../Common/Components/Item';
-import {  catagoryId, id_text, ListingIconSize, Searchresultfor, explore, value_text, all, vegetabels } from '../../Common/Text/Const';
+import {  catagoryId, id_text, Searchresultfor, explore, value_text, all } from '../../Common/Text/Const';
 import "./Listing.scss";
-import {AiOutlineRight,AiOutlineLeft} from "react-icons/ai"
+// import {AiOutlineRight,AiOutlineLeft} from "react-icons/ai"
 import { scrollToTop } from '../../Common/Components/CommonUtlis';
 
 

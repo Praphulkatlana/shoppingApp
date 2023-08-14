@@ -2,7 +2,7 @@ import React from 'react'
 import {useNavigate} from "react-router-dom"
 import { scrollToTop } from '../../Common/Components/CommonUtlis'
 import { catagorySubtitle } from '../../Common/LongText'
-import {  shopNow, explore, vegetabels, catagory, all } from '../../Common/Text/Const'
+import {  shopNow, vegetabels, catagory, all } from '../../Common/Text/Const'
 import HomeCatagoryCard from './HomeCatagoryCard'
 
 const HomeCatagory = () => {
