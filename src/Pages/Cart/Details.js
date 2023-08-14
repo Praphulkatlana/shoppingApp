@@ -1,7 +1,7 @@
 import React,{useState,useRef,useContext, useEffect} from 'react'
-import { notify, userDetailUpdate } from '../../Common/Components/CommonUtlis';
+import { notify } from '../../Common/Components/CommonUtlis';
 import { userDetailsUpdated } from '../../Common/LongText';
-import {yourDetail, email, name, mobile, type_submit, update, address, additionalMessage, type_text, type_email, type_number, additionalMessage_form, emailRegx, mobileRegx, onlySpecialCharsRegex, dataErrorMessage, additionalMessage_placeholder } from '../../Common/Text/Const';
+import {yourDetail, email, name, mobile, type_submit, update, address, additionalMessage, type_text, emailRegx, mobileRegx, onlySpecialCharsRegex, dataErrorMessage, additionalMessage_placeholder } from '../../Common/Text/Const';
 import { onUserDetailsUpdate } from '../../State/Action';
 import userContext from '../../State/UserContext';
 

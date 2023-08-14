@@ -13,7 +13,7 @@ import userContext from '../../State/UserContext';
 
 const Cart = () => {
   const navigation=useNavigate();
-  const { state,dispatch } = useContext(userContext);
+  const { state} = useContext(userContext);
 
   const SubTotal=calculateSubTotal()
   const DeliveryCharges=calculateDeliveryCharges()

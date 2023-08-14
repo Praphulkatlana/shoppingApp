@@ -10,7 +10,7 @@ import userContext from '../../State/UserContext';
 import { cartLengthUpadte, onCartUpdate } from '../../State/Action';
 
 const Item = ({data}) => {
-    const{id,name,price,discountPrice=null,tag=null,img,perSybmol=perKG}=data; 
+    const{id,name,price,discountPrice=null,tag=null,perSybmol=perKG}=data; 
     const { state,dispatch } = useContext(userContext);
 
     const navigation=useNavigate()

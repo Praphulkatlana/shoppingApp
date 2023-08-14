@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom"
-import { cart, cartListData, cartNumber } from "../Text/Const";
+import { cart, cartNumber } from "../Text/Const";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { itemAddedToCart, itemRemoveFromCart } from "../LongText";
